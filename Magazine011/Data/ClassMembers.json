@@ -1,0 +1,58 @@
+﻿[
+  {
+    "Id": "1",
+    "Name": "Ifunanya",
+    "Email": "ifunanya@sample.com",
+    "Password": "123",
+    "Role": "Decadev"
+  },
+  {
+    "Id": "2",
+    "Name": "Kunle",
+    "Email": "kunle@sample.com",
+    "Password": "123",
+    "Role": "Decadev"
+  },
+  {
+    "Id": "3",
+    "Name": "Emma I.",
+    "Email": "emmai.@sample.com",
+    "Password": "123",
+    "Role": "Decadev"
+  },
+  {
+    "Id": "4",
+    "Name": "Daniel",
+    "Email": "daniel@sample.com",
+    "Password": "123",
+    "Role": "Decadev"
+  },
+  {
+    "Id": "5",
+    "Name": "Hope",
+    "Email": "hope@sample.com",
+    "Password": "123",
+    "Role": "Decadev"
+  },
+  {
+    "Id": "6",
+    "Name": "Aba",
+    "Email": "aba@sample.com",
+    "Password": "123",
+    "Role": "Decadev"
+  },
+  {
+    "Id": "7",
+    "Name": "Ifeanyi",
+    "Email": "ifeanyi@sample.com",
+    "Password": "123",
+    "Role": "Decadev"
+  },
+  {
+    "Id": "8",
+    "Name": "Ikechukwu",
+    "Email": "ikechukwu@sample.com",
+    "Password": "123",
+    "Role": "Decadev"
+  }
+]

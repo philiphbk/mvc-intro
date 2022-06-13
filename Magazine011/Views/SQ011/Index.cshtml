@@ -1,0 +1,24 @@
+﻿
+@model List<UserForListViewModel>
+
+@{
+    ViewData["title"] = "SQ011 Welcome page";
+}
+
+
+<div style="text-align: center">
+    <h1>Welcome SQ011</h1>
+
+    <h5>members List</h5>
+</div>
+
+<div class="myContainer">
+    @foreach (var member in Model)
+    {
+    <div class="myCard">
+        <div>@member.Id</div>
+        <div>@member.Name</div>
+        <div>@member.Email</div>
+    </div>
+    }
+</div>
