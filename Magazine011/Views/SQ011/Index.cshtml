@@ -15,10 +15,12 @@
 <div class="myContainer">
     @foreach (var member in Model)
     {
-    <div class="myCard">
-        <div>@member.Id</div>
-        <div>@member.Name</div>
-        <div>@member.Email</div>
-    </div>
+    <a asp-controller="User" class="card-shadow" asp-action="Profile" asp-route-userId="@member.Id">
+        <div class="myCard">
+            <div><strong>ID:</strong> @member.Id</div>
+            <div><strong>Name:</strong> @member.Name</div>
+            <div><strong>Email:</strong> @member.Email</div>
+        </div>
+    </a>
     }
 </div>

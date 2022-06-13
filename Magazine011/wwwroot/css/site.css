@@ -73,8 +73,6 @@ body {
 
 /*----------------------------Mine--------------------------*/
 .myCard{
-    border: 1px solid grey;
-    border-radius: 6px;
     padding: 40px;
     margin: 20px;
     width: 300px;
@@ -87,4 +85,31 @@ body {
     margin-top: 50px;
     border: 1px solid grey;
     flex-wrap: wrap;
+    padding: 40px;
+}
+.myContainer#user-profile{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+a{
+    text-decoration:none;
+}
+.card-shadow:hover {
+    box-shadow: 4px 4px 4px 4px #ddd;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.profile-pix {
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+    overflow:hidden;
+    margin-right: 40px;
+}
+.profile-pix img{
+    width: 100%;
+}
+.myFlex{
+    display:flex;
 }

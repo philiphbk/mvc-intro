@@ -6,5 +6,6 @@ namespace Magazine011.Services
     public interface IUserService
     {
         public List<User> Users { get; }
+        public User GetUserById(string id);
     }
 }

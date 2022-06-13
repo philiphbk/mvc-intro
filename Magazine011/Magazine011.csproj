@@ -10,14 +10,25 @@
     <None Remove="Data\" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="Services\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Settings\" />
+    <None Remove="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\SQ011\" />
     <Folder Include="ViewModel\" />
     <Folder Include="Data\" />
     <Folder Include="Services\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Views\User\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\SQ011\Profile.cshtml" />
+    <Content Remove="wwwroot\images\" />
   </ItemGroup>
 </Project>
