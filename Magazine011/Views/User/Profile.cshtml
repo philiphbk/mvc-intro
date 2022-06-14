@@ -24,9 +24,10 @@
         </div>
     </div>
     <div>
-        <form method="post" asp-action="EditProfile" asp-controller="User">
-            <button>EDIT USER</button>
-        </form>
+        <a asp-action="EditProfile" asp-controller="User"
+           asp-route-userId="@Model.Id" class="btn btn-primary">
+            EDIT USER
+        </a>
     </div>
 
 </div>
