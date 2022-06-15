@@ -13,6 +13,7 @@ namespace Magazine011.Settings
             CreateMap<User, UserDetailViewModel>();
             CreateMap<User, EditProfileViewModel>(); // getting
             CreateMap<AddUserViewModel, User>(); // posting
+            CreateMap<User, ProfilePixViewModel>(); // posting
         }
     }
 }

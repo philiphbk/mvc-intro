@@ -33,6 +33,7 @@ namespace Magazine011.Services
                     member.Name = user.Name;
                     member.Password = user.Password;
                     member.Role = user.Role;
+                    member.Photo = user.Photo;
                 }
             }
 
