@@ -97,10 +97,12 @@ namespace Magazine011.Controllers
             }
 
             // map from add user view model to user
-            var userToAdd = _mapper.Map<User>(model);
+            //var userToAdd = _mapper.Map<User>(model);
+            var userToAdd = _mapper.Map<UserForDB>(model);
 
             // add to data source
-            var addUserResult = _userService.AddUser(userToAdd);
+            //var addUserResult = _userService.AddUser(userToAdd);
+            var addUserResult = _userService.AddUserToDB(userToAdd);
 
             return RedirectToAction("index", "SQ011");
 

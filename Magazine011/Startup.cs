@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Magazine011.Data.Repository;
 using Magazine011.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,7 @@ namespace Magazine011
         {
             services.AddControllersWithViews();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IRepository, Repository>();
             services.AddAutoMapper();
         }
 

@@ -9,6 +9,8 @@ namespace Magazine011.ViewModels
         [StringLength(30, ErrorMessage = "Name must be less than 30 characters and greater than 3 characters", MinimumLength =3)]
         public string Name { get; set; }
         [Required]
+        public string LastName { get; set; }
+        [Required]
         [EmailAddress]
         public string Email { get; set; }
         [Required]
