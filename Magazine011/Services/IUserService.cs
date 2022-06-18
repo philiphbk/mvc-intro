@@ -6,7 +6,7 @@ namespace Magazine011.Services
     public interface IUserService
     {
         public List<User> Users { get; }
-        public List<UserForDB> UsersFromDB { get; }
+        public List<UserForDB> GetUsersFromDB();
 
         public User GetUserById(string id);
         public User GetUserByEmail(string email);

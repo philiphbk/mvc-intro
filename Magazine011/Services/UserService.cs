@@ -12,7 +12,7 @@ namespace Magazine011.Services
     public class UserService : IUserService
     {
         public List<User> Users { get; private set; }
-        public List<UserForDB> UsersFromDB { get; private set; }
+        //public List<UserForDB> UsersFromDB { get; private set; }
 
         private readonly IConfiguration _config;
         private readonly IRepository _repo;
@@ -21,33 +21,42 @@ namespace Magazine011.Services
         {
             
             Users = Seeder.ReadMe(config);
-            UsersFromDB = GetUsersFromDB();
+            //UsersFromDB = GetUsersFromDB();
             _config = config;
             _repo = repository;
         }
 
-        private List<UserForDB> GetUsersFromDB()
+        public List<UserForDB> GetUsersFromDB()
         {
             var res = _repo.FetchData("SELECT * FROM Persons");
-            if (res.HasRows)
+            //var con = _repo.GetConnection();
+            try
             {
-                var results = new List<UserForDB>();
-                while (res.NextResult())
+                //con.Open();
+                if (res.HasRows)
                 {
-                    results.Add(
-                        new UserForDB()
-                        {
-                            Id = res.GetInt32(0),
-                            FirstName = res.GetString(1),
-                            LastName = res.GetString(2),
-                        }
-                    );
+                    var results = new List<UserForDB>();
+                    while (res.Read())
+                    {
+                        results.Add(
+                            new UserForDB()
+                            {
+                                Id = res.GetInt32(0),
+                                FirstName = res.GetString(1),
+                                LastName = res.GetString(2),
+                            }
+                        );
+                    }
+                    return results;
                 }
-                return results;
+                else
+                {
+                    return new List<UserForDB>();
+                }
             }
-            else
+            finally
             {
-                return new List<UserForDB>();
+                //con.Close();
             }
         }
 

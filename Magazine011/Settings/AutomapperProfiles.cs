@@ -10,7 +10,9 @@ namespace Magazine011.Settings
         public AutomapperProfiles()
         {
             CreateMap<User, UserForListViewModel>();
-            CreateMap<UserForDB, UserForListViewModel>();
+            CreateMap<UserForDB, UserForListViewModel>()
+                .ForMember(dest=>dest.Id,x=>x.MapFrom(x=>x.Id))
+                .ForMember(dest=>dest.Name,x=>x.MapFrom(x=> $"{x.FirstName} {x.LastName}"));
             CreateMap<User, UserDetailViewModel>();
             CreateMap<User, EditProfileViewModel>(); // getting
             CreateMap<AddUserViewModel, User>(); // posting

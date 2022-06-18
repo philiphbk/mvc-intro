@@ -14,7 +14,7 @@ namespace Magazine011.Data.Repository
             
         }
 
-        private SqlConnection GetConnection()
+        public SqlConnection GetConnection()
         {
             return new SqlConnection(_conStr) ;
         }
@@ -44,18 +44,11 @@ namespace Magazine011.Data.Repository
         public SqlDataReader FetchData(string statement)
         {
             var con = GetConnection();
-            try
+            con.Open();
+            using (var cmd = new SqlCommand(statement, con))
             {
-                con.Open();
-                using (var cmd = new SqlCommand(statement, con))
-                {
-                    var res = cmd.ExecuteReader();
-                    return res;
-                }
-            }
-            finally
-            {
-                con.Close();
+                var res = cmd.ExecuteReader();
+                return res;
             }
 
         }

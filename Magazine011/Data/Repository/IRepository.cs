@@ -7,6 +7,7 @@ namespace Magazine011.Data.Repository
     {
       
         public bool ExecuteQuery(string statement);
+        public SqlConnection GetConnection();
         public SqlDataReader FetchData(string statement);
     }
 }

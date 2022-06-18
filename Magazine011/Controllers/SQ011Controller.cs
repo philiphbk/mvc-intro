@@ -31,7 +31,7 @@ namespace Magazine011.Controllers
         public IActionResult Index()
         {
             //var users = _userService.Users;
-            var users = _userService.UsersFromDB;
+            var users = _userService.GetUsersFromDB();
 
             // map user to the view model
             var usersToList = _mapper.Map<List<UserForListViewModel>>(users);
